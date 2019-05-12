@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://mpgrocer.herokuapp.com';
   
 export function getProducts() {
 	return axios.get(`${BASE_URL}/products`)
@@ -9,7 +9,7 @@ export function getProducts() {
 
 export function getCartProducts(cart) {
 	return axios.post(`${BASE_URL}/products`, {cart})
-		.then(response => response.data);
+		.then(response => response.data);	
 }
 
 export function login (data) {
